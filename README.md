@@ -282,3 +282,5 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 <div align="center">
   <sub>Built with ❤️ by the ChainGuard Core Engineering Team.</sub>
 </div>
+
+---
