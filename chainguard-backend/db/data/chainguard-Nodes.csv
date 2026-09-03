@@ -1,0 +1,18 @@
+ID;name;country;sea;air;xPct;yPct;latitude;longitude
+BOM;Mumbai;India;true;true;60.5;50.2;18.9438;72.8387
+PVG;Shanghai;China;true;true;78.8;42.5;31.2304;121.4737
+SIN;Singapore;Singapore;true;true;71.8;60.2;1.3521;103.8198
+PUS;Busan;South Korea;true;true;81.2;38.6;35.1796;129.0756
+HND;Tokyo;Japan;true;true;84.5;38.2;35.6762;139.6503
+DXB;Dubai;United Arab Emirates;true;true;56.2;48.5;25.2048;55.2708
+CMB;Colombo;Sri Lanka;true;true;62.5;58.8;6.9271;79.8612
+CPT;Cape Town;South Africa;true;true;49.2;82.5;-33.9249;18.4241
+RTM;Rotterdam;Netherlands;true;true;45.2;28.5;51.9244;4.4777
+HAM;Hamburg;Germany;true;true;47.5;26.8;53.5511;9.9937
+LHR;London;United Kingdom;false;true;43.5;27.8;51.5074;-0.1278
+FRA;Frankfurt;Germany;false;true;46.8;29.2;50.1109;8.6821
+IST;Istanbul;Turkey;true;true;51.8;36.5;41.0082;28.9784
+JFK;New York;United States;true;true;25.8;34.2;40.7128;-74.0060
+LAX;Los Angeles;United States;true;true;14.5;38.5;34.0522;-118.2437
+SSZ;Santos;Brazil;true;true;32.5;76.5;-23.9608;-46.3336
+SYD;Sydney;Australia;true;true;87.2;78.5;-33.8688;151.2093

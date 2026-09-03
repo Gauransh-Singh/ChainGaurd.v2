@@ -1,0 +1,156 @@
+[
+  {
+    "id": "suez",
+    "name": "Suez Canal",
+    "category": "canal",
+    "icon": "\u2693",
+    "hint": "Egypt \u2022 Connects Red Sea to Mediterranean",
+    "xPct": 51.72,
+    "yPct": 46.83,
+    "associatedNodes": [
+      "DXB",
+      "RTM",
+      "IST"
+    ],
+    "crisisType": "ROUTE_BLOCKAGE",
+    "crisisTitle": "Red Sea & Suez Canal Maritime Blockade",
+    "crisisDesc": "Security alert and military drone activity halted all container vessel passage through the Suez Canal & Bab-el-Mandeb."
+  },
+  {
+    "id": "babelmandeb",
+    "name": "Bab-el-Mandeb Strait",
+    "category": "strait",
+    "icon": "\u2693",
+    "hint": "Yemen / Djibouti \u2022 Red Sea Entrance",
+    "xPct": 54.84,
+    "yPct": 57.77,
+    "associatedNodes": [
+      "DXB",
+      "RTM",
+      "CMB"
+    ],
+    "crisisType": "ROUTE_BLOCKAGE",
+    "crisisTitle": "Bab-el-Mandeb Maritime Security Closure",
+    "crisisDesc": "Naval conflict & commercial transit suspension at the southern gateway to the Red Sea."
+  },
+  {
+    "id": "hormuz",
+    "name": "Strait of Hormuz",
+    "category": "strait",
+    "icon": "\u2693",
+    "hint": "Persian Gulf Entrance \u2022 Near Dubai",
+    "xPct": 58.01,
+    "yPct": 49.5,
+    "associatedNodes": [
+      "DXB",
+      "BOM"
+    ],
+    "crisisType": "ROUTE_BLOCKAGE",
+    "crisisTitle": "Strait of Hormuz Navigational Restriction",
+    "crisisDesc": "Emergency naval standoff and exclusion zone declared at the entrance of the Persian Gulf."
+  },
+  {
+    "id": "panama",
+    "name": "Panama Canal",
+    "category": "canal",
+    "icon": "\u2693",
+    "hint": "Central America \u2022 Connects Atlantic to Pacific",
+    "xPct": 23.32,
+    "yPct": 58.71,
+    "associatedNodes": [
+      "NYC",
+      "LAX",
+      "SSZ"
+    ],
+    "crisisType": "ROUTE_BLOCKAGE",
+    "crisisTitle": "Panama Canal Low-Draft Restrictions",
+    "crisisDesc": "Severe seasonal drought reducing Gatun Lake water levels, imposing emergency daily transit limits."
+  },
+  {
+    "id": "taiwan_strait",
+    "name": "Taiwan Strait & SCS",
+    "category": "strait",
+    "icon": "\ud83c\udf2a\ufe0f",
+    "hint": "East Asia \u2022 Between China, Taiwan & Philippines",
+    "xPct": 75.8,
+    "yPct": 48.5,
+    "associatedNodes": [
+      "SHA",
+      "PUS",
+      "TYO",
+      "SIN"
+    ],
+    "crisisType": "SEVERE_WEATHER",
+    "crisisTitle": "South China Sea Super Typhoon Warning",
+    "crisisDesc": "Category 4 Super Typhoon generating 10-meter wave swells along the Taiwan Strait maritime corridor."
+  },
+  {
+    "id": "cape_good_hope",
+    "name": "Cape of Good Hope",
+    "category": "cape",
+    "icon": "\u2693",
+    "hint": "South Africa \u2022 The Africa Detour Route",
+    "xPct": 47.9,
+    "yPct": 85.5,
+    "associatedNodes": [
+      "CPT",
+      "RTM",
+      "DXB",
+      "SSZ"
+    ],
+    "crisisType": "SEVERE_WEATHER",
+    "crisisTitle": "Cape of Good Hope South Atlantic Gale",
+    "crisisDesc": "Severe southern ocean rough sea state affecting long-haul transshipment detours around Africa."
+  },
+  {
+    "id": "gibraltar",
+    "name": "Strait of Gibraltar",
+    "category": "strait",
+    "icon": "\u2693",
+    "hint": "Spain / Morocco \u2022 Atlantic to Mediterranean",
+    "xPct": 41.2,
+    "yPct": 38.0,
+    "associatedNodes": [
+      "RTM",
+      "DXB",
+      "NYC",
+      "IST"
+    ],
+    "crisisType": "ROUTE_BLOCKAGE",
+    "crisisTitle": "Strait of Gibraltar Emergency Closure",
+    "crisisDesc": "Container ship disabled in main shipping channel, temporarily halting transit into Mediterranean."
+  },
+  {
+    "id": "english_channel",
+    "name": "English Channel",
+    "category": "strait",
+    "icon": "\u2693",
+    "hint": "UK / France \u2022 Route to Rotterdam & Hamburg",
+    "xPct": 43.6,
+    "yPct": 33.8,
+    "associatedNodes": [
+      "LON",
+      "RTM",
+      "HAM"
+    ],
+    "crisisType": "SEVERE_WEATHER",
+    "crisisTitle": "North Sea & English Channel Winter Storm",
+    "crisisDesc": "Dense fog and gale-force winds causing berthing suspensions across Rotterdam and Hamburg."
+  },
+  {
+    "id": "bosphorus",
+    "name": "Bosphorus Strait",
+    "category": "strait",
+    "icon": "\u2693",
+    "hint": "Istanbul \u2022 Connects Black Sea to Mediterranean",
+    "xPct": 50.14,
+    "yPct": 40.67,
+    "associatedNodes": [
+      "IST",
+      "RTM"
+    ],
+    "crisisType": "PORT_CONGESTION",
+    "crisisTitle": "Bosphorus Strait Vessel Backlog",
+    "crisisDesc": "Maritime pilot strike and high current navigation restrictions backing up regional traffic."
+  }
+]

@@ -1,0 +1,11 @@
+ID;fromNode;toNode;mode;distanceKm;isTranspacific;corridorName
+R-SEA-01;PVG;RTM;sea;19800.00;false;Asia-Europe Maritime Silk Road via Suez
+R-AIR-01;PVG;FRA;air;8900.00;false;Shanghai-Frankfurt Air Medical Express
+R-SEA-02;BOM;RTM;sea;12400.00;false;India-Europe Med Bridge via Suez
+R-AIR-02;BOM;DXB;air;1950.00;false;Mumbai-Dubai Air Bridge
+R-SEA-03;SIN;RTM;sea;15200.00;false;Singapore-Rotterdam Deep-Sea Route
+R-AIR-03;DXB;RTM;air;5000.00;false;Dubai-Rotterdam Fast Charter
+R-SEA-04;PVG;LAX;sea;10400.00;true;Transpacific Deep-Sea Freight Lane
+R-AIR-04;HND;LAX;air;8800.00;true;Tokyo-Los Angeles Transpacific Air Bridge
+R-SEA-05;BOM;CPT;sea;8100.00;false;Indian Ocean Southern Detour
+R-SEA-06;CPT;RTM;sea;11200.00;false;Atlantic Cape Detour Route

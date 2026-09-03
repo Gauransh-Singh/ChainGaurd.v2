@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  body {
+    background-color: #090d18;
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.04) 0%, transparent 40%);
+  }
+}
+
+/* Custom modern dark scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1322;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glow shadows */
+.shadow-glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+.shadow-glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
+}
+.shadow-glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+.shadow-glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
+.shadow-glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+}
+
+/* Leaflet Container & Popup Styling */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #090d18 !important;
+  font-family: 'Inter', sans-serif !important;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0f1524 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #1b2336 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8) !important;
+}
+
+.leaflet-popup-tip {
+  background: #0f1524 !important;
+}
+
+.custom-ship-marker,
+.custom-node-pin {
+  background: transparent !important;
+  border: none !important;
+}

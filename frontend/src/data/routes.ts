@@ -1,0 +1,942 @@
+export interface CustomRoute {
+  id: string;
+  from: string;
+  to: string;
+  mode: 'sea' | 'air' | 'road' | 'rail';
+  isTranspacific?: boolean;
+  controlPoints: { xPct: number; yPct: number }[];
+}
+
+export const INITIAL_CUSTOM_ROUTES: CustomRoute[] = [
+  {
+    "id": "SEA-SHA-PUS-7816",
+    "from": "SHA",
+    "to": "PUS",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 75.99,
+        "yPct": 47.98
+      }
+    ]
+  },
+  {
+    "id": "SEA-SHA-SIN-6634",
+    "from": "SHA",
+    "to": "SIN",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 75.84,
+        "yPct": 48.08
+      }
+    ]
+  },
+  {
+    "id": "SEA-PUS-TYO-4009",
+    "from": "PUS",
+    "to": "TYO",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 77.02,
+        "yPct": 47.7
+      },
+      {
+        "xPct": 79.03,
+        "yPct": 45.68
+      }
+    ]
+  },
+  {
+    "id": "SEA-TYO-SIN-3896",
+    "from": "TYO",
+    "to": "SIN",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 79.14,
+        "yPct": 46.62
+      },
+      {
+        "xPct": 73.87,
+        "yPct": 54.1
+      }
+    ]
+  },
+  {
+    "id": "SEA-SIN-BOM-8262",
+    "from": "SIN",
+    "to": "BOM",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 70.84,
+        "yPct": 67.12
+      },
+      {
+        "xPct": 68.34,
+        "yPct": 67.65
+      },
+      {
+        "xPct": 62.78,
+        "yPct": 60.16
+      }
+    ]
+  },
+  {
+    "id": "SEA-SIN-CMB-4956",
+    "from": "SIN",
+    "to": "CMB",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 70.86,
+        "yPct": 67.12
+      },
+      {
+        "xPct": 68.41,
+        "yPct": 67.65
+      },
+      {
+        "xPct": 64.28,
+        "yPct": 62.27
+      }
+    ]
+  },
+  {
+    "id": "SEA-SIN-DXB-5559",
+    "from": "SIN",
+    "to": "DXB",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 70.88,
+        "yPct": 67.04
+      },
+      {
+        "xPct": 68.75,
+        "yPct": 67.65
+      },
+      {
+        "xPct": 63.27,
+        "yPct": 61.23
+      },
+      {
+        "xPct": 60.13,
+        "yPct": 52.98
+      },
+      {
+        "xPct": 58.5,
+        "yPct": 50.8
+      },
+      {
+        "xPct": 58.0,
+        "yPct": 49.5
+      }
+    ]
+  },
+  {
+    "id": "SEA-CMB-DXB-1854",
+    "from": "CMB",
+    "to": "DXB",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 62.65,
+        "yPct": 59.95
+      },
+      {
+        "xPct": 60.58,
+        "yPct": 54.16
+      },
+      {
+        "xPct": 58.3,
+        "yPct": 50.65
+      },
+      {
+        "xPct": 58.02,
+        "yPct": 49.61
+      }
+    ]
+  },
+  {
+    "id": "SEA-BOM-DXB-0913",
+    "from": "BOM",
+    "to": "DXB",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 60.24,
+        "yPct": 52.94
+      },
+      {
+        "xPct": 59.36,
+        "yPct": 52.06
+      },
+      {
+        "xPct": 58.35,
+        "yPct": 50.61
+      },
+      {
+        "xPct": 58.03,
+        "yPct": 49.45
+      }
+    ]
+  },
+  {
+    "id": "SEA-DXB-CPT-2889",
+    "from": "DXB",
+    "to": "CPT",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 58.06,
+        "yPct": 49.47
+      },
+      {
+        "xPct": 58.56,
+        "yPct": 50.87
+      },
+      {
+        "xPct": 59.37,
+        "yPct": 52.32
+      },
+      {
+        "xPct": 59.05,
+        "yPct": 54.83
+      },
+      {
+        "xPct": 57.02,
+        "yPct": 62.39
+      },
+      {
+        "xPct": 53.25,
+        "yPct": 76.24
+      },
+      {
+        "xPct": 50.7,
+        "yPct": 83.69
+      }
+    ]
+  },
+  {
+    "id": "SEA-DXB-RTM-6848",
+    "from": "DXB",
+    "to": "RTM",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 58.02,
+        "yPct": 49.6
+      },
+      {
+        "xPct": 58.36,
+        "yPct": 50.75
+      },
+      {
+        "xPct": 59.29,
+        "yPct": 52.81
+      },
+      {
+        "xPct": 56.99,
+        "yPct": 56.67
+      },
+      {
+        "xPct": 54.49,
+        "yPct": 57.09
+      },
+      {
+        "xPct": 52.54,
+        "yPct": 49.83
+      },
+      {
+        "xPct": 51.4,
+        "yPct": 46.01
+      },
+      {
+        "xPct": 46.65,
+        "yPct": 43.45
+      },
+      {
+        "xPct": 45.36,
+        "yPct": 42.53
+      },
+      {
+        "xPct": 40.93,
+        "yPct": 43.75
+      },
+      {
+        "xPct": 40.48,
+        "yPct": 37.48
+      },
+      {
+        "xPct": 42.54,
+        "yPct": 34.73
+      }
+    ]
+  },
+  {
+    "id": "SEA-CPT-RTM-4225",
+    "from": "CPT",
+    "to": "RTM",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 46.09,
+        "yPct": 81.07
+      },
+      {
+        "xPct": 38.95,
+        "yPct": 59.89
+      },
+      {
+        "xPct": 38.75,
+        "yPct": 48.25
+      },
+      {
+        "xPct": 41.5,
+        "yPct": 36.14
+      }
+    ]
+  },
+  {
+    "id": "SEA-CPT-SSZ-3257",
+    "from": "CPT",
+    "to": "SSZ",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 40.26,
+        "yPct": 82.24
+      },
+      {
+        "xPct": 35.68,
+        "yPct": 79.45
+      }
+    ]
+  },
+  {
+    "id": "SEA-RTM-HAM-0589",
+    "from": "RTM",
+    "to": "HAM",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 44.82,
+        "yPct": 31.65
+      },
+      {
+        "xPct": 45.42,
+        "yPct": 31.23
+      }
+    ]
+  },
+  {
+    "id": "SEA-RTM-NYC-1743",
+    "from": "RTM",
+    "to": "NYC",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 41.7,
+        "yPct": 34.86
+      },
+      {
+        "xPct": 37.36,
+        "yPct": 34.25
+      },
+      {
+        "xPct": 33.29,
+        "yPct": 35.47
+      }
+    ]
+  },
+  {
+    "id": "SEA-NYC-LAX-4981",
+    "from": "NYC",
+    "to": "LAX",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 24.85,
+        "yPct": 50.77
+      },
+      {
+        "xPct": 22.68,
+        "yPct": 60.24
+      },
+      {
+        "xPct": 19.27,
+        "yPct": 58.67
+      },
+      {
+        "xPct": 15.5,
+        "yPct": 54.13
+      },
+      {
+        "xPct": 13.38,
+        "yPct": 49.12
+      }
+    ]
+  },
+  {
+    "id": "SEA-TYO-SYD-8716",
+    "from": "TYO",
+    "to": "SYD",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 83.35,
+        "yPct": 67.35
+      },
+      {
+        "xPct": 83.76,
+        "yPct": 80.88
+      }
+    ]
+  },
+  {
+    "id": "SEA-TYO-LAX-7116",
+    "from": "TYO",
+    "to": "LAX",
+    "mode": "sea",
+    "isTranspacific": true,
+    "controlPoints": [
+      {
+        "xPct": 95.74,
+        "yPct": 29.63
+      }
+    ]
+  },
+  {
+    "id": "AIR-SHA-TYO-7734",
+    "from": "SHA",
+    "to": "TYO",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 77.1,
+        "yPct": 44.97
+      }
+    ]
+  },
+  {
+    "id": "AIR-SHA-SIN-0887",
+    "from": "SHA",
+    "to": "SIN",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 72.2,
+        "yPct": 50.05
+      }
+    ]
+  },
+  {
+    "id": "AIR-SHA-FRA-8420",
+    "from": "SHA",
+    "to": "FRA",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 60.1,
+        "yPct": 35.71
+      }
+    ]
+  },
+  {
+    "id": "AIR-SHA-LAX-1408",
+    "from": "SHA",
+    "to": "LAX",
+    "mode": "air",
+    "isTranspacific": true,
+    "controlPoints": [
+      {
+        "xPct": 97.0,
+        "yPct": 23.06
+      }
+    ]
+  },
+  {
+    "id": "AIR-PUS-TYO-6031",
+    "from": "PUS",
+    "to": "TYO",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 78.19,
+        "yPct": 44.08
+      }
+    ]
+  },
+  {
+    "id": "AIR-SIN-TYO-7705",
+    "from": "SIN",
+    "to": "TYO",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 74.61,
+        "yPct": 48.83
+      }
+    ]
+  },
+  {
+    "id": "AIR-LAX-TYO-2733",
+    "from": "LAX",
+    "to": "TYO",
+    "mode": "air",
+    "isTranspacific": true,
+    "controlPoints": [
+      {
+        "xPct": 96.11,
+        "yPct": 24.95
+      }
+    ]
+  },
+  {
+    "id": "AIR-SIN-BOM-7460",
+    "from": "SIN",
+    "to": "BOM",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 65.97,
+        "yPct": 53.88
+      }
+    ]
+  },
+  {
+    "id": "AIR-SIN-DXB-0216",
+    "from": "SIN",
+    "to": "DXB",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 63.67,
+        "yPct": 52.03
+      }
+    ]
+  },
+  {
+    "id": "AIR-SIN-SYD-6641",
+    "from": "SIN",
+    "to": "SYD",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 76.84,
+        "yPct": 68.38
+      }
+    ]
+  },
+  {
+    "id": "AIR-BOM-DXB-7808",
+    "from": "BOM",
+    "to": "DXB",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 59.47,
+        "yPct": 52.63
+      }
+    ]
+  },
+  {
+    "id": "AIR-BOM-FRA-0133",
+    "from": "BOM",
+    "to": "FRA",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 53.87,
+        "yPct": 39.55
+      }
+    ]
+  },
+  {
+    "id": "SEA-SYD-SIN-6547",
+    "from": "SYD",
+    "to": "SIN",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 83.51,
+        "yPct": 80.21
+      },
+      {
+        "xPct": 80.39,
+        "yPct": 70.12
+      },
+      {
+        "xPct": 74.85,
+        "yPct": 70.74
+      }
+    ]
+  },
+  {
+    "id": "SEA-SSZ-NYC-0329",
+    "from": "SSZ",
+    "to": "NYC",
+    "mode": "sea",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 33.72,
+        "yPct": 75.6
+      },
+      {
+        "xPct": 35.24,
+        "yPct": 65.99
+      },
+      {
+        "xPct": 27.53,
+        "yPct": 47.56
+      }
+    ]
+  },
+  {
+    "id": "AIR-DXB-FRA-0534",
+    "from": "DXB",
+    "to": "FRA",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 51.56,
+        "yPct": 37.69
+      }
+    ]
+  },
+  {
+    "id": "AIR-DXB-IST-9840",
+    "from": "DXB",
+    "to": "IST",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 54.11,
+        "yPct": 42.82
+      }
+    ]
+  },
+  {
+    "id": "AIR-FRA-IST-4735",
+    "from": "FRA",
+    "to": "IST",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 48.93,
+        "yPct": 35.44
+      }
+    ]
+  },
+  {
+    "id": "AIR-LON-IST-9861",
+    "from": "LON",
+    "to": "IST",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 47.32,
+        "yPct": 33.9
+      }
+    ]
+  },
+  {
+    "id": "AIR-LON-FRA-8260",
+    "from": "LON",
+    "to": "FRA",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 44.71,
+        "yPct": 34.78
+      }
+    ]
+  },
+  {
+    "id": "AIR-NYC-FRA-0725",
+    "from": "NYC",
+    "to": "FRA",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 35.16,
+        "yPct": 32.14
+      }
+    ]
+  },
+  {
+    "id": "AIR-NYC-LON-1776",
+    "from": "NYC",
+    "to": "LON",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 34.11,
+        "yPct": 31.76
+      }
+    ]
+  },
+  {
+    "id": "AIR-NYC-LAX-0127",
+    "from": "NYC",
+    "to": "LAX",
+    "mode": "air",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 18.7,
+        "yPct": 37.11
+      }
+    ]
+  },
+  {
+    "id": "AIR-SYD-LAX-9767",
+    "from": "SYD",
+    "to": "LAX",
+    "mode": "air",
+    "isTranspacific": true,
+    "controlPoints": [
+      {
+        "xPct": 2.73,
+        "yPct": 69.96
+      }
+    ]
+  },
+  {
+    "id": "ROAD-FRA-RTM-3910",
+    "from": "FRA",
+    "to": "RTM",
+    "mode": "road",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 45.0,
+        "yPct": 34.2
+      }
+    ]
+  },
+  {
+    "id": "ROAD-FRA-HAM-4180",
+    "from": "FRA",
+    "to": "HAM",
+    "mode": "road",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 45.8,
+        "yPct": 33.5
+      }
+    ]
+  },
+  {
+    "id": "ROAD-LON-RTM-2290",
+    "from": "LON",
+    "to": "RTM",
+    "mode": "road",
+    "isTranspacific": false,
+    "controlPoints": [
+      {
+        "xPct": 43.8,
+        "yPct": 33.4
+      }
+    ]
+  }
+
+,
+  {
+  "id": "AIR-SYD-TYO-9821",
+  "from": "SYD",
+  "to": "TYO",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 80.9,
+      "yPct": 63.7
+    }
+  ]
+},
+  {
+  "id": "AIR-SYD-BOM-5412",
+  "from": "SYD",
+  "to": "BOM",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 72.3,
+      "yPct": 68.8
+    }
+  ]
+},
+  {
+  "id": "AIR-SYD-DXB-3190",
+  "from": "SYD",
+  "to": "DXB",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 70.0,
+      "yPct": 66.9
+    }
+  ]
+},
+  {
+  "id": "AIR-BOM-LON-4410",
+  "from": "BOM",
+  "to": "LON",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 52.7,
+      "yPct": 43.7
+    }
+  ]
+},
+  {
+  "id": "AIR-DXB-LON-7120",
+  "from": "DXB",
+  "to": "LON",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 50.4,
+      "yPct": 41.8
+    }
+  ]
+},
+  {
+  "id": "AIR-SIN-FRA-5820",
+  "from": "SIN",
+  "to": "FRA",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 57.7,
+      "yPct": 49.2
+    }
+  ]
+},
+  {
+  "id": "AIR-SIN-LON-6310",
+  "from": "SIN",
+  "to": "LON",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 56.5,
+      "yPct": 48.4
+    }
+  ]
+},
+  {
+  "id": "AIR-SHA-LON-8830",
+  "from": "SHA",
+  "to": "LON",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 58.9,
+      "yPct": 39.8
+    }
+  ]
+}
+,
+  {
+  "id": "AIR-SHA-PUS-3120",
+  "from": "SHA",
+  "to": "PUS",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 75.5,
+      "yPct": 45.4
+    }
+  ]
+},
+  {
+  "id": "AIR-BOM-CMB-2140",
+  "from": "BOM",
+  "to": "CMB",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 63.0,
+      "yPct": 57.5
+    }
+  ]
+},
+  {
+  "id": "AIR-LON-HAM-1280",
+  "from": "LON",
+  "to": "HAM",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 44.6,
+      "yPct": 32.7
+    }
+  ]
+},
+  {
+  "id": "AIR-RTM-HAM-1940",
+  "from": "RTM",
+  "to": "HAM",
+  "mode": "air",
+  "isTranspacific": false,
+  "controlPoints": [
+    {
+      "xPct": 45.2,
+      "yPct": 32.8
+    }
+  ]
+}
+];

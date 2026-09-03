@@ -1,0 +1,44 @@
+{
+  "name": "chainguard-backend",
+  "version": "1.0.0",
+  "description": "ChainGuard Autonomous Supply Chain Resilience Mesh - SAP CAP Backend",
+  "repository": "<custom-repository>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^8",
+    "express": "^4",
+    "@cap-js/sqlite": "^1.7.0"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.6.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch": "cds watch"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    },
+    "protocols": {
+      "odata-v4": {
+        "path": "/odata/v4"
+      }
+    },
+    "cors": {
+      "origin": [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:8000",
+        "http://192.168.1.5:5173"
+      ],
+      "credentials": true
+    }
+  }
+}
